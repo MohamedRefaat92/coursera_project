@@ -1,8 +1,10 @@
-all: readme.txt
+all: README.md
 
-readme.txt: guessinggame.sh
-	echo "Guess the number of files" > readme.txt
-	date >> readme.txt
-	cat guessinggame.sh | wc -l >> readme.txt
+README.md: guessinggame.sh
+	echo "## Final Project" > README.md
+	echo "date:">> README.md
+	date >> README.md
+	echo "Number of lines:"
+	cat guessinggame.sh | wc -l >> README.md
 clean:
-	rm readme.txt
+	rm README.md
